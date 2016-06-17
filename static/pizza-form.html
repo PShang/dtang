@@ -1,0 +1,47 @@
+<style>
+  input.ng-invalid.ng-touched {
+    background: indigo
+  }
+  
+  label {
+    display: block
+  }
+</style>
+
+<h3>Édition pizza</h3>
+
+<form name="pizzaForm" ng-submit="$ctrl.savePizza(pizzaForm)" novalidate>
+
+  <div class="form-group">
+    <label for="name">Nom :</label>
+    <input 
+    ng-model-options="{ updateOn : 'blur' }" 
+    ng-model="$ctrl.pizza.name" 
+    required 
+    name="name" 
+    type="text" 
+    class="form-control"
+    id="name">
+    <p class="text-danger" ng-if="pizzaForm.name.$invalid && pizzaForm.name.$touched">Nom obligatoire</p>
+  </div>
+
+  <div class="form-group">
+     <!--<div class="row">
+      <div class="col-md-6">un</div>
+      <div class="col-md-6">deux</div>-->
+    <pizza-toppings 
+    toppings="$ctrl.pizza.toppings"
+    all-toppings="$ctrl.toppings"
+    del-toppings="$ctrl.delToppingDUPIZZACONTROLLER($event)"
+    on-add-topping = "$ctrl.addToppingDUPIZZACONTROLLER($event)"
+   
+    ></pizza-toppings>
+  </div>
+ 
+
+  <div class="form-group">
+    <button type="submit" class="btn btn-primary">Enregistrer</button>
+    <a ng-href="#/" type="button" class="btn">Annuler</a>
+  </div>
+
+</form>

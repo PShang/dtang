@@ -1,0 +1,38 @@
+{
+  "pizzas": [
+    {
+      "id": 1,
+      "name": "Pizza",
+      "toppings": [
+        "eggs",
+        "mushrooms"
+      ]
+    },
+    {
+      "name": "new pizza",
+      "toppings": [
+        "eggs"
+      ],
+      "id": 2
+    }
+  ],
+  "toppings": {
+    "tomato sauce": {
+      "fr": "Tomate"
+    },
+    "mozzarella": {},
+    "mushrooms": {
+      "fr": "Champignons"
+    },
+    "ham": {},
+    "eggs": {},
+    "artichoke": {},
+    "green olives": {},
+    "onion": {},
+    "sweet corn": {},
+    "green peppers": {},
+    "black olives": {},
+    "peas": {},
+    "salami": {}
+  }
+}
